@@ -35,25 +35,27 @@
 	color: var(--header-text-color);
 	position: relative;
 	transition: color var(--transition);
+
+	&:hover,
+	&:focus {
+		color: var(--effects-color);
+	}
+	&.current::after {
+		content: "";
+		display: block;
+		width: 100%;
+		position: absolute;
+		height: 4px;
+		border-radius: 2px;
+		background-color: var(--effects-color);
+		bottom: 0;
+	}
 }
 
-.nav__link:hover,
-.nav__link:focus {
-	color: var(--effects-color);
-}
 .active {
 	color: var(--effects-color);
 }
-.nav__link.current::after {
-	content: "";
-	display: block;
-	width: 100%;
-	position: absolute;
-	height: 4px;
-	border-radius: 2px;
-	background-color: var(--effects-color);
-	bottom: 0;
-}
+
 .header__contacts,
 .header__contacts .contacts__item {
 	display: flex;

@@ -32,8 +32,9 @@
 	border: 0;
 	border-radius: 4px;
 	transition: color var(--transition);
-}
-.hero__button:hover,
-.hero__button:focus {
-	color: var(--button-primary-color);
+
+	&:hover,
+	&:focus {
+		color: var(--button-primary-color);
+	}
 }

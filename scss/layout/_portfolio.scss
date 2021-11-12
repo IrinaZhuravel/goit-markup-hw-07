@@ -21,13 +21,15 @@
 	border: 0;
 	border-radius: 4px;
 	transition: color var(--transition), background-color var(--transition), box-shadow var(--transition);
+
+	&:focus,
+	&:hover {
+		color: var(--button-secondary-color);
+		background-color: var(--effects-color);
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	}
 }
-.filter__btn:focus,
-.filter__btn:hover {
-	color: var(--button-secondary-color);
-	background-color: var(--effects-color);
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-}
+
 .project {
 	display: flex;
 	flex-wrap: wrap;
@@ -43,11 +45,12 @@
 .project__link {
 	display: block;
 	transition: box-shadow var(--transition);
+	&:hover,
+	&.project__lin:focus {
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
 }
-.project__link:hover,
-.project__link:focus {
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+
 .project__item--wrup {
 	position: relative;
 	overflow: hidden;
@@ -77,11 +80,13 @@
 	height: 100%;
 	transform: translateY(100%);
 	transition: transform var(--transition);
+
+	.project__link:hover &,
+	.project__link:focus & {
+		transform: translateY(0);
+	}
 }
-.project__link:hover .project__img--text,
-.project__link:focus .project__img--text {
-	transform: translateY(0);
-}
+
 .project__title {
 	font-weight: 700;
 	font-size: 18px;

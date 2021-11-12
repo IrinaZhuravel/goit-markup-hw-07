@@ -34,9 +34,9 @@
 	width: 108px;
 	height: 60px;
 	transition: fill var(--transition);
-}
 
-.clients__link:hover .clients__icon,
-.clients__link:focus .clients__icon {
-	fill: var(--effects-color);
+	.clients__link:hover &,
+	.clients__link:focus & {
+		fill: var(--effects-color);
+	}
 }

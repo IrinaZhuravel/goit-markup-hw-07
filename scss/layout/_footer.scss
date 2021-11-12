@@ -36,6 +36,9 @@
 	letter-spacing: 0.03em;
 	color: var(--footer-text-color);
 	transition: color var(--transition);
+
+	&:focus,
+	&:hover {color: var(--effects-color);
 }
 .address__link {
 	font-style: normal;
@@ -44,13 +47,12 @@
 	letter-spacing: 0.03em;
 	color: var(--footer-contact-color);
 	transition: color var(--transition);
-}
-.address__map:focus,
-.address__map:hover,
-.address__link:focus,
-.address__link:hover {
+
+	&:focus,
+	&:hover {
 	color: var(--effects-color);
 }
+
 
 .subscribe__title {
 	font-weight: 900;

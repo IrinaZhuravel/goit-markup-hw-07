@@ -14,6 +14,11 @@
 .social__icon {
 	fill: var(--social-team-color);
 	transition: fill var(--transition);
+
+	.social__link:hover &,
+	.social__link:focus & {
+		fill: var(--social-footer-color);
+	}
 }
 
 .social__link {
@@ -29,9 +34,4 @@
 	&:focus {
 		background-color: var(--effects-color);
 	}
-}
-
-.social__link:hover .social__icon,
-.social__link:focus .social__icon {
-	fill: var(--social-footer-color);
 }
